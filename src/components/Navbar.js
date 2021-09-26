@@ -56,24 +56,25 @@ function Navbar() {
           <Grid item xs={6}>
             {!isMobile && (
               <div className={classes.navlinks}>
-                <NavLink to="/" className={classes.link}>
-                  <Typography>Home</Typography>
-                </NavLink>
-                <NavLink to="/about" className={classes.link}>
+                <Typography>
+                  <a className={classes.link}>Home</a>
+                </Typography>
+
+                <a className={classes.link}>
                   <Typography>Services</Typography>
-                </NavLink>
-                <NavLink to="/contact" className={classes.link}>
+                </a>
+                <a className={classes.link}>
                   <Typography>Device</Typography>
-                </NavLink>
-                <NavLink to="/faq" className={classes.link}>
+                </a>
+                <a className={classes.link}>
                   <Typography>Tracking</Typography>
-                </NavLink>
-                <NavLink to="/faq" className={classes.link}>
+                </a>
+                <a className={classes.link}>
                   <Typography> Blog</Typography>
-                </NavLink>
-                <NavLink to="/faq" className={classes.link}>
+                </a>
+                <a className={classes.link}>
                   <Typography>Contact Us</Typography>
-                </NavLink>
+                </a>
               </div>
             )}
           </Grid>
