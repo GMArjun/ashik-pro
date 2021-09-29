@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,25 +58,52 @@ const useStyles = makeStyles((theme) => ({
   },
   radioSelect: {
     display: "flex",
-    gap: "10px",
-    marginTop: "20px",
+    gap: "20px",
+    marginTop: theme.spacing(5),
     "& .labl": {
       display: "block",
       width: "100%",
+      "& .duration": {
+        marginBottom: theme.spacing(1),
+      },
       "& input": {
         visibility: "hidden",
         position: "absolute",
         "& + div": {
-          border: "2px solid yellow",
+          border: "2px solid grey",
+          padding: theme.spacing(1),
+          borderRadius: theme.spacing(1),
+          cursor: "pointer",
+          fontSize: "20px",
         },
         "&:checked": {
           "& + div": {
-            border: "2px solid skyblue",
+            border: "2px solid blue",
           },
         },
       },
     },
   },
+  buttonEnd: {
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  totalSection: {
+    marginTop: theme.spacing(3),
+  },
+  list2: {
+    fontSize: "13px",
+    "& p":{
+      marginBottom: "0px",
+      color: "grey"
+    },
+    "& ol":{
+      margin: "0px",
+      paddingLeft: "15px",
+      color: "grey"
+    }
+  }
 }));
 
 function ExtendedWarranty() {
@@ -89,7 +117,7 @@ function ExtendedWarranty() {
         </Typography>
 
         <Grid container spacing={2}>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <div className={classes.sections}>
               <Typography variant="h5">Extended Warranty Features</Typography>
               <Typography>
@@ -147,7 +175,7 @@ function ExtendedWarranty() {
               </Typography>
             </div>
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={12} md={8}>
             <div className={classes.sections}>
               <Typography variant="h5">Hello!</Typography>
 
@@ -200,6 +228,36 @@ function ExtendedWarranty() {
                   <div>$20000</div>
                 </label>
               </div>
+
+              <Grid container spacing={2} className={classes.totalSection}>
+                <Grid item xs={6}>
+                  <Typography variant="h6">Total 3344</Typography>
+                  <Typography>(Inclusive of all Tax)</Typography>
+                </Grid>
+                <Grid item xs={6} className={classes.buttonEnd}>
+                  <Button variant="contained" color="primary">
+                    Primary
+                  </Button>
+                </Grid>
+              </Grid>
+
+              <Typography className={classes.list2}>
+                <p>Note</p>
+                <ol>
+                  <li>
+                    jkfgndsl gfdglfd glifdjligjd fligjilfdjg lifdjl
+                    gidfjilgjdfig
+                  </li>
+                  <li>
+                    jkfgndsl gfdglfd glifdjligjd fligjilfdjg lifdjl
+                    gidfjilgjdfig
+                  </li>
+                  <li>
+                    jkfgndsl gfdglfd glifdjligjd fligjilfdjg lifdjl
+                    gidfjilgjdfig
+                  </li>
+                </ol>
+              </Typography>
             </div>
           </Grid>
         </Grid>
